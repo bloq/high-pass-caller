@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "bloq"
+  ],
+  "root": true,
+  "rules": {
+    "consistent-return": "off"
+  }
+}

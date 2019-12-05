@@ -1,9 +1,9 @@
-language: node_js
+os: linux
 
+language: node_js
 node_js:
   - "10"
   - "8"
-
 cache: npm
 
 if: tag IS blank
@@ -25,6 +25,5 @@ jobs:
       deploy:
         provider: script
         script: if [ -n "$VERSION_TAG" ]; then npm publish --access public --otp "$NPM_OTP"; else echo commit not tagged; fi
-        skip_cleanup: true
 
       after_deploy: rm ~/.npmrc
